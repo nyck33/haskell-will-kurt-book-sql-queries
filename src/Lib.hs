@@ -47,11 +47,6 @@ _where test vals = do
     guard (test val) --filters out values that don't pass the test
     return val 
 
--- test _where with startsWith
-startsWith :: Char -> String -> Bool
-startsWith char string = char == (head string)
-
-nName = _where (startsWith 'N' . firstName) (_select studentName students)
 
 data Teacher = Teacher 
     { teacherId :: Int

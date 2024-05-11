@@ -9,9 +9,9 @@ version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/sqlquery#readme>
 homepage:       https://github.com/githubuser/sqlquery#readme
 bug-reports:    https://github.com/githubuser/sqlquery/issues
-author:         Author name here
+author:         Nobutaka Kim
 maintainer:     example@example.com
-copyright:      2024 Author name here
+copyright:      Will Kurt Get Programming in Haskell
 license:        BSD-3-Clause
 license-file:   LICENSE
 build-type:     Simple
