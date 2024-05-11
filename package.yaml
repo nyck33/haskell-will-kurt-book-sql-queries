@@ -2,9 +2,9 @@ name:                sqlquery
 version:             0.1.0.0
 github:              "githubuser/sqlquery"
 license:             BSD-3-Clause
-author:              "Author name here"
+author:              "Nobutaka Kim"
 maintainer:          "example@example.com"
-copyright:           "2024 Author name here"
+copyright:           "Will Kurt Get Programming in Haskell"
 
 extra-source-files:
 - README.md

@@ -4,7 +4,6 @@ module Lib where
 import Control.Monad
 import Control.Applicative
 
-
 data Name = Name {
     firstName :: String,
     lastName :: String
@@ -214,6 +213,7 @@ joinStBelow = _join students enrollments studentId student
 (Student {studentId = 6, gradeLevel = Senior, studentName = Mom Super},Enrollment {student = 6, course = 101})]
 -}
 --queries students and courses enrolled in
+-- data HINQ m a b = HINQ (m a -> m b) (m a) (m a -> m a) | HINQ_ (m a -> m b) (m a)
 --studentEnrollmentsQ :: HINQ [] (Student, Enrollment) (Student, Enrollment)
 studentEnrollmentsQ = HINQ_ (_select (\(st, en) -> (studentName st, course en))) (_join students enrollments studentId student)
 
@@ -228,8 +228,8 @@ ghci> studentEnrollments
 -- join studentEnrollments with courses
 
 -- first check join statement
+englishStudentsQ :: HINQ [] ((Name, Int), Course) Name
 englishStudentsQ = HINQ (_select (fst . fst)) (_join studentEnrollments courses snd courseId) (_where ((== "English") . courseTitle . snd))
-
 
 
 -- Find all students taking English
